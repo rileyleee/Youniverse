@@ -1,0 +1,38 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/youniverse?serverTimezone=Asia/Seoul&useSSL=false&useUnicode=true&characterEncoding=utf8
+    username: youniverse
+    password: 1234
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+    show-sql: true
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibernate:
+        format_sql: true
+#  servlet:
+#    multipart:
+#      max-file-size: 50MB
+#      max-request-size: 500MB
+logging:
+  level:
+    org:
+      hibernate:
+        sql: debug
+        type:
+          descriptor:
+            sql: trace
+#cloud:
+#  aws:
+#    s3:
+#      bucket: yeongki
+#    credentials:
+#      access-key: AKIAZTK3OLBDMWUAJV5Q
+#      secret-key: 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
+#    region:
+#      static: ap-northeast-2
+#      auto: false
+#    stack:
+#      auto: false
