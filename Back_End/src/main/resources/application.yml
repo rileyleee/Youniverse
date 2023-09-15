@@ -12,10 +12,10 @@ spring:
     properties:
       hibernate:
         format_sql: true
-#  servlet:
-#    multipart:
-#      max-file-size: 50MB
-#      max-request-size: 500MB
+  servlet:
+    multipart:
+      max-file-size: 50MB
+      max-request-size: 500MB
 logging:
   level:
     org:
@@ -24,15 +24,15 @@ logging:
         type:
           descriptor:
             sql: trace
-#cloud:
-#  aws:
-#    s3:
-#      bucket: yeongki
-#    credentials:
-#      access-key: AKIAZTK3OLBDMWUAJV5Q
-#      secret-key: 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
-#    region:
-#      static: ap-northeast-2
-#      auto: false
-#    stack:
-#      auto: false
+cloud:
+  aws:
+    s3:
+      bucket: yeongki
+    credentials:
+      access-key: AKIAZTK3OLBDMODIVKOV
+      secret-key: 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
+    region:
+      static: ap-northeast-2
+      auto: false
+    stack:
+      auto: false
