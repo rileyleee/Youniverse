@@ -1,4 +1,17 @@
 spring:
+  profiles:
+    group:
+      "local" : "local, jwt, oauth"
+    active : local
+
+---
+spring:
+  config:
+    activate:
+      on-profile: "local"
+  redis:
+    host: localhost
+    port: 6379
   datasource:
     #   배포된 db
     url: jdbc:mysql://j9b204.p.ssafy.io:3306/youniverse?allowPublicKeyRetrieval=true&useSSL=false
