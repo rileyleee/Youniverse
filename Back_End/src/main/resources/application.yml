@@ -19,10 +19,10 @@ spring:
 #    password: youniverse204
 
 #   로컬 db
-#    driver-class-name: com.mysql.cj.jdbc.Driver
-#    url: jdbc:mysql://localhost:3306/youniverse?serverTimezone=Asia/Seoul&useSSL=false&useUnicode=true&characterEncoding=utf8
-#    username: youniverse
-#    password: 1234
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/youniverse?serverTimezone=Asia/Seoul&useSSL=false&useUnicode=true&characterEncoding=utf8
+    username: root
+    password: ssafy
   jpa:
     database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
     show-sql: true
