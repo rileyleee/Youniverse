@@ -10,7 +10,8 @@ spring:
     activate:
       on-profile: "local"
   redis:
-    host: localhost
+#    host:
+    host: j9b204.p.ssafy.io
     port: 6379
   datasource:
 #       배포된 db
