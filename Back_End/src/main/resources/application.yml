@@ -1,3 +1,9 @@
+redirection:
+  # 서버
+  url: https://j9b204.p.ssafy.io
+#  로컬
+#  url: http://localhost:3000
+
 spring:
   profiles:
     group:
@@ -10,19 +16,20 @@ spring:
     activate:
       on-profile: "local"
   redis:
-    host: localhost
+#    host: localhost
+    host: j9b204.p.ssafy.io
     port: 6379
   datasource:
-##       배포된 db
-#    url: jdbc:mysql://j9b204.p.ssafy.io:3306/youniverse?allowPublicKeyRetrieval=true&useSSL=false
-#    username: youniverse
-#    password: youniverse204
+#       배포된 db
+    url: jdbc:mysql://j9b204.p.ssafy.io:3306/youniverse?allowPublicKeyRetrieval=true&useSSL=false
+    username: youniverse
+    password: youniverse204
 
-#   로컬 db
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/youniverse?serverTimezone=Asia/Seoul&useSSL=false&useUnicode=true&characterEncoding=utf8
-    username: root
-    password: ssafy
+##   로컬 db
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+#    url: jdbc:mysql://localhost:3306/youniverse?serverTimezone=Asia/Seoul&useSSL=false&useUnicode=true&characterEncoding=utf8
+#    username: root
+#    password: ssafy
   jpa:
     database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
     show-sql: true
