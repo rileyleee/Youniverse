@@ -34,7 +34,7 @@ spring:
     database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
     show-sql: true
     hibernate:
-      ddl-auto: update
+      ddl-auto: create
     properties:
       hibernate:
         format_sql: true
@@ -62,3 +62,5 @@ cloud:
       auto: false
     stack:
       auto: false
+deepL:
+  auth-Key: e6fdc2a1-445c-b652-1ced-4dbf0373e1db:fx
