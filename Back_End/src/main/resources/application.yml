@@ -1,0 +1,66 @@
+redirection:
+  # 서버
+  url: https://j9b204.p.ssafy.io
+#  로컬
+#  url: http://localhost:3000
+
+spring:
+  profiles:
+    group:
+      "local" : "local, jwt, oauth"
+    active : local
+
+---
+spring:
+  config:
+    activate:
+      on-profile: "local"
+  redis:
+#    host: localhost
+    host: j9b204.p.ssafy.io
+    port: 6379
+  datasource:
+#       배포된 db
+    url: jdbc:mysql://j9b204.p.ssafy.io:3306/youniverse?allowPublicKeyRetrieval=true&serverTimezone=Asia/Seoul&useSSL=false&useUnicode=true&characterEncoding=utf8
+    username: youniverse
+    password: youniverse204
+
+##   로컬 db
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+#    url: jdbc:mysql://localhost:3306/youniverse?serverTimezone=Asia/Seoul&useSSL=false&useUnicode=true&characterEncoding=utf8
+#    username: youniverse
+#    password: 1234
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        format_sql: true
+  servlet:
+    multipart:
+      max-file-size: 50MB
+      max-request-size: 500MB
+logging:
+  level:
+    org:
+      hibernate:
+        sql: debug
+        type:
+          descriptor:
+            sql: trace
+cloud:
+  aws:
+    s3:
+      bucket: yeongki
+    credentials:
+      access-key: AKIAZTK3OLBDMODIVKOV
+      secret-key: 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
+    region:
+      static: ap-northeast-2
+      auto: false
+    stack:
+      auto: false
+deepL:
+  auth-Key: e6fdc2a1-445c-b652-1ced-4dbf0373e1db:fx
